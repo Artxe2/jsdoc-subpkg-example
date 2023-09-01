@@ -1,0 +1,43 @@
+{
+	"author": "artxe2",
+	"description": "JSDoc Subpackage Example",
+	"exports": {
+		".": {
+			"default": "./index.js",
+			"types": "./@types/index.d.ts"
+		},
+		"./math": {
+			"default": "./src/math/index.js",
+			"types": "./@types/src/math/index.d.ts"
+		},
+		"./string": {
+			"default": "./src/string/index.js",
+			"types": "./@types/src/string/index.d.ts"
+		},
+		"./type-test": {
+			"default": "./src/type-test/index.js",
+			"types": "./@types/src/type-test/index.d.ts"
+		},
+		"./@types": "./src/public.d.ts"
+	},
+	"keywords": [],
+	"license": "MIT",
+	"main": "index.js",
+	"name": "my-lib",
+	"scripts": {
+		"dts": "tsc",
+		"test": "cd ../../test/my-lib/ && vitest run"
+	},
+	"type": "module",
+	"types": "@types/index.d.ts",
+	"typesVersions": {
+		"*": {
+			"*": ["@types/index.d.ts"],
+			"math": ["@types/src/math/index.d.ts"],
+			"string": ["@types/src/string/index.d.ts"],
+			"type-test": ["@types/src/type-test/index.d.ts"],
+			"@types": ["src/public.d.ts"]
+		}
+	},
+	"version": "1.0.8"
+}

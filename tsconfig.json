@@ -1,0 +1,11 @@
+{
+	"compilerOptions": {
+		"allowSyntheticDefaultImports": true,
+		"lib": ["ES2020", "DOM", "DOM.Iterable"],
+		"module": "ES6",
+		"moduleResolution": "Node",
+		"noEmit": true,
+		"skipLibCheck": true,
+		"strict": true
+	}
+}
