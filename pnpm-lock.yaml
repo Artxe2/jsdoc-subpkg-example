@@ -11,6 +11,9 @@ importers:
       '@typescript-eslint/parser':
         specifier: ^6.5.0
         version: 6.5.0(eslint@8.48.0)(typescript@5.2.2)
+      another-lib:
+        specifier: workspace:^
+        version: link:packages/another-lib
       eslint:
         specifier: ^8.48.0
         version: 8.48.0
@@ -23,6 +26,12 @@ importers:
       vitest:
         specifier: ^0.34.3
         version: 0.34.3
+
+  packages/another-lib:
+    devDependencies:
+      my-lib:
+        specifier: workspace:^
+        version: link:../my-lib
 
   packages/my-lib: {}
 

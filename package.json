@@ -3,6 +3,7 @@
 	"description": "JSDoc Subpackage Example",
 	"devDependencies": {
 		"@typescript-eslint/parser": "^6.5.0",
+		"another-lib": "workspace:^",
 		"eslint": "^8.48.0",
 		"my-lib": "workspace:^",
 		"typescript": "^5.2.2",

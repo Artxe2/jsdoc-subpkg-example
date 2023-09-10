@@ -1,5 +1,5 @@
 /**
- * @param {import("../../../public.js").ConcatParam[]} strs
+ * @param {import("my-lib/@types").ConcatParam[]} strs
  */
 export default function concat(...strs) {
 	let result = ""

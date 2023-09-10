@@ -3,26 +3,26 @@
 	"description": "JSDoc Subpackage Example",
 	"exports": {
 		".": {
-			"default": "./index.js",
+			"default": "./src/index.js",
 			"types": "./@types/index.d.ts"
 		},
 		"./math": {
 			"default": "./src/math/index.js",
-			"types": "./@types/src/math/index.d.ts"
+			"types": "./@types/math/index.d.ts"
 		},
 		"./string": {
 			"default": "./src/string/index.js",
-			"types": "./@types/src/string/index.d.ts"
+			"types": "./@types/string/index.d.ts"
 		},
 		"./type-test": {
 			"default": "./src/type-test/index.js",
-			"types": "./@types/src/type-test/index.d.ts"
+			"types": "./@types/type-test/index.d.ts"
 		},
-		"./@types": "./src/public.d.ts"
+		"./@types": "./public.d.ts"
 	},
 	"keywords": [],
 	"license": "MIT",
-	"main": "index.js",
+	"main": "src/index.js",
 	"name": "my-lib",
 	"scripts": {
 		"dts": "tsc",
@@ -33,11 +33,11 @@
 	"typesVersions": {
 		"*": {
 			"*": ["@types/index.d.ts"],
-			"math": ["@types/src/math/index.d.ts"],
-			"string": ["@types/src/string/index.d.ts"],
-			"type-test": ["@types/src/type-test/index.d.ts"],
-			"@types": ["src/public.d.ts"]
+			"math": ["@types/math/index.d.ts"],
+			"string": ["@types/string/index.d.ts"],
+			"type-test": ["@types/type-test/index.d.ts"],
+			"@types": ["public.d.ts"]
 		}
 	},
-	"version": "1.0.8"
+	"version": "0.2.0"
 }

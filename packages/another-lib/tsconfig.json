@@ -8,7 +8,7 @@
 		"declarationMap": true,
 		"emitDeclarationOnly": true,
 		"lib": ["ES2020", "DOM", "DOM.Iterable"],
-		"module": "Node16",
+		"module": "NodeNext",
 		"outDir": "silences wrong TS error, we don't compile, we only typecheck",
 		"rootDir": "src",
 		"skipLibCheck": true,

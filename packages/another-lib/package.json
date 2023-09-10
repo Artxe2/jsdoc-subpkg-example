@@ -1,0 +1,18 @@
+{
+	"author": "artxe2",
+	"devDependencies": {
+		"my-lib": "workspace:^"
+	},
+	"description": "JSDoc Subpackage Example",
+	"keywords": [],
+	"license": "MIT",
+	"main": "src/index.js",
+	"name": "another-lib",
+	"scripts": {
+		"dts": "tsc",
+		"test": "cd ../../test/my-lib/ && vitest run"
+	},
+	"type": "module",
+	"types": "@types/index.d.ts",
+	"version": "0.2.0"
+}
