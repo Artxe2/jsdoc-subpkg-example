@@ -14,5 +14,10 @@
 	},
 	"type": "module",
 	"types": "@types/index.d.ts",
+	"typesVersions": {
+		"*": {
+			"*": ["@types/index.d.ts"]
+		}
+	},
 	"version": "0.2.0"
 }
