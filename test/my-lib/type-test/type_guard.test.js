@@ -4,7 +4,7 @@ import {
 	it
 } from "vitest"
 
-import { typeTest as type_test } from "my-lib/type-test"
+import { typeTest } from "my-lib/type-test"
 
 describe(
 	"type_test",
@@ -12,28 +12,37 @@ describe(
 		it(
 			"type A test",
 			() => {
-				assert.equal(type_test({
-					type: "A",
-					a: () => "aa" 
-				}), "aa")
+				assert.equal(
+					typeTest({
+						type: "A",
+						a: () => "aa" 
+					}),
+					"aa"
+				)
 			}
 		)
 		it(
 			"type Btest",
 			() => {
-				assert.equal(type_test({
-					type: "B",
-					b: () => "bb" 
-				}), "bb")
+				assert.equal(
+					typeTest({
+						type: "B",
+						b: () => "bb" 
+					}),
+					"bb"
+				)
 			}
 		)
 		it(
 			"type C test",
 			() => {
-				assert.equal(type_test({
-					type: "C",
-					c: () => "cc" 
-				}), "cc")
+				assert.equal(
+					typeTest({
+						type: "C",
+						c: () => "cc" 
+					}),
+					"cc"
+				)
 			}
 		)
 	}

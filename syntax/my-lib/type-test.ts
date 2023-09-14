@@ -1,15 +1,15 @@
 import {
 	Test,
 	generic,
-	importType as import_type,
-	typeTest as type_test
+	importType,
+	typeTest
 } from "my-lib/type-test"
 
 const test = new Test("asd")
 
 generic({})
 
-import_type(test)
+importType(test)
 
 
-type_test({ type: "A", a: () => "" })
+typeTest({ type: "A", a: () => "" })
