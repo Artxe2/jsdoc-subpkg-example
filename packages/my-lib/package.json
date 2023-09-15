@@ -4,19 +4,19 @@
 	"exports": {
 		".": {
 			"default": "./src/index.js",
-			"types": "./@types/index.d.ts"
+			"types": "./types/index.d.ts"
 		},
 		"./math": {
 			"default": "./src/math/index.js",
-			"types": "./@types/math/index.d.ts"
+			"types": "./types/math/index.d.ts"
 		},
 		"./string": {
 			"default": "./src/string/index.js",
-			"types": "./@types/string/index.d.ts"
+			"types": "./types/string/index.d.ts"
 		},
 		"./type-test": {
 			"default": "./src/type-test/index.js",
-			"types": "./@types/type-test/index.d.ts"
+			"types": "./types/type-test/index.d.ts"
 		},
 		"./@types": "./public.d.ts"
 	},
@@ -29,13 +29,13 @@
 		"test": "cd ../../test/my-lib/ && vitest run"
 	},
 	"type": "module",
-	"types": "@types/index.d.ts",
+	"types": "types/index.d.ts",
 	"typesVersions": {
 		"*": {
-			"*": ["@types/index.d.ts"],
-			"math": ["@types/math/index.d.ts"],
-			"string": ["@types/string/index.d.ts"],
-			"type-test": ["@types/type-test/index.d.ts"],
+			"*": ["types/index.d.ts"],
+			"math": ["types/math/index.d.ts"],
+			"string": ["types/string/index.d.ts"],
+			"type-test": ["types/type-test/index.d.ts"],
 			"@types": ["public.d.ts"]
 		}
 	},

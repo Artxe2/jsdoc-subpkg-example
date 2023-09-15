@@ -196,7 +196,7 @@ export default function concat(...strs) {
 export default function concat(...strs: import("../../public.js").ConcatParam[]): string;
 //# sourceMappingURL=concat.d.ts.map
 ```
-Since JSDoc `import`` statements are written using relative paths, it is important to match the relative paths of the automatically generated dts files.
+Since JSDoc `import` statements are written using relative paths, it is important to match the relative paths of the automatically generated dts files.
 
 ```js
 // js source
