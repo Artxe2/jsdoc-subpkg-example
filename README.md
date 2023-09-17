@@ -222,7 +222,6 @@ export default function concat(...strs: ConcatParam[]): string;
 export type ConcatParam = string | number;
 //# sourceMappingURL=concat.d.ts.map
 ```
-Do not use `@typedef` as it is not well-supported with `d.ts` files.
 
 ## Conclusion
 We have covered in detail how to create an npm package using JSDoc, including the subpath module.

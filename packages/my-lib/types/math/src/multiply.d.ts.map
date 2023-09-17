@@ -1,1 +1,1 @@
-{"version":3,"file":"multiply.d.ts","sourceRoot":"","sources":["../../../src/math/src/multiply.js"],"names":[],"mappings":"AAAA;;;GAGG;AACH,oCAHW,OAAO,qBAAqB,EAAE,UAAU,KACxC,OAAO,qBAAqB,EAAE,UAAU,UAIlD"}
+{"version":3,"file":"multiply.d.ts","sourceRoot":"","sources":["../../../src/math/src/multiply.js"],"names":[],"mappings":"AAAA;;;GAGG;AACH,oCAHW,OAAO,qBAAqB,EAAE,UAAU,KACxC,OAAO,qBAAqB,EAAE,UAAU,UAIlD;2BAEa,MAAM,GAAG,MAAM"}
