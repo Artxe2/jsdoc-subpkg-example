@@ -1,6 +1,4 @@
-import {
-	assert, describe, it 
-} from "vitest"
+import { assert, describe, it } from "vitest"
 import { add } from "my-lib/math"
 import { add as _add } from "my-lib"
 

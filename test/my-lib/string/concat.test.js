@@ -1,6 +1,4 @@
-import {
-	assert, describe, it 
-} from "vitest"
+import { assert, describe, it } from "vitest"
 import { concat } from "my-lib/string"
 import { concat as _concat } from "my-lib"
 
