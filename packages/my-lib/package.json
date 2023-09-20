@@ -24,6 +24,11 @@
 	"license": "MIT",
 	"main": "src/index.js",
 	"name": "my-lib",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Artxe2/jsdoc-subpkg-example",
+		"directory": "packages/my-lib"
+	},
 	"scripts": {
 		"dts": "tsc",
 		"test": "cd ../../test/my-lib/ && vitest run"
