@@ -48,14 +48,14 @@ Additionally, the `noEmit` option is set to `true` to perform type checking only
 
 ```js
 // ./.eslintrc.json
-  "ignorePatterns": ["**/@types/**/*.d.ts"],
+  "ignorePatterns": ["**/types/**/*.d.ts"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
 ```
-Files within the `@types` folder are automatically generated, so they are excluded from eslint checks.
+Files within the `types` folder are automatically generated, so they are excluded from eslint checks.
 
 In the `syntax` and `test` folders, files are created for type checking and testing purposes. The library packages are located under the `packages` folder.
 
@@ -102,28 +102,28 @@ export const contents$ = writable(
   "exports": {
     ".": {
       "default": "./src/index.js",
-      "types": "./@types/index.d.ts"
+      "types": "./types/index.d.ts"
     },
     "./math": {
       "default": "./src/math/index.js",
-      "types": "./@types/math/index.d.ts"
+      "types": "./types/math/index.d.ts"
     },
     "./string": {
       "default": "./src/string/index.js",
-      "types": "./@types/string/index.d.ts"
+      "types": "./types/string/index.d.ts"
     },
     "./type-test": {
       "default": "./src/type-test/index.js",
-      "types": "./@types/type-test/index.d.ts"
+      "types": "./types/type-test/index.d.ts"
     },
   "./@types": "./public.d.ts"
   },
   "typesVersions": {
     "*": {
-      "*": ["@types/index.d.ts"],
-      "math": ["@types/math/index.d.ts"],
-      "string": ["@types/string/index.d.ts"],
-      "type-test": ["@types/type-test/index.d.ts"],
+      "*": ["types/index.d.ts"],
+      "math": ["types/math/index.d.ts"],
+      "string": ["types/string/index.d.ts"],
+      "type-test": ["types/type-test/index.d.ts"],
       "@types": ["public.d.ts"]
     }
   },
@@ -140,7 +140,7 @@ However, for users who don't have this configuration, we also need to set the `t
     "allowSyntheticDefaultImports": true,
     "checkJs": true,
     "declaration": true,
-    "declarationDir": "@types",
+    "declarationDir": "types",
     "declarationMap": true,
     "emitDeclarationOnly": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
@@ -155,7 +155,7 @@ However, for users who don't have this configuration, we also need to set the `t
 ```
 In order to use JSDoc in a project, we need to set `allowJs` and `checkJs` to `true`.
 The `outDir` option is configured in the `tsconfig.json` file to suppress error messages.
-If you additionally configure the `declaration`, `declarationDir`, `declarationMap`, and `emitDeclarationOnly` options, you can use the tsc command to analyze JSDoc and generate `d.ts` and `d.ts.map` files in the `@types` folder.
+If you additionally configure the `declaration`, `declarationDir`, `declarationMap`, and `emitDeclarationOnly` options, you can use the tsc command to analyze JSDoc and generate `d.ts` and `d.ts.map` files in the `types` folder.
 Setting the `module` option to `Node16` offers several convenient benefits when using JSDoc.
 Because `d.ts` files are placed in the root directory of the package and used as relative paths, we set the `rootDir` to `src` to match the relative path levels of the js source and automatically generated `d.ts` files
 
