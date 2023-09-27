@@ -5,7 +5,7 @@
 		"@typescript-eslint/parser": "^6.7.2",
 		"another-lib": "workspace:^",
 		"eslint": "^8.49.0",
-		"eslint-plugin-lube": "^0.2.3",
+		"eslint-plugin-lube": "^0.2.5",
 		"my-lib": "workspace:^",
 		"typescript": "^5.2.2",
 		"vitest": "^0.34.4"

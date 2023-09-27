@@ -18,8 +18,8 @@ importers:
         specifier: ^8.49.0
         version: 8.49.0
       eslint-plugin-lube:
-        specifier: ^0.2.3
-        version: 0.2.3
+        specifier: ^0.2.5
+        version: 0.2.5
       my-lib:
         specifier: workspace:^
         version: link:packages/my-lib
@@ -663,8 +663,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /eslint-plugin-lube@0.2.3:
-    resolution: {integrity: sha512-J6lEkjv3hKzfn/t+UQPZxrHh4N4hzG4kXcbhMtloIQjYozP6SmjQh6AlhauUFKmHwDht4d1Y2PqE8LtkzvWa6A==}
+  /eslint-plugin-lube@0.2.5:
+    resolution: {integrity: sha512-XzJGvcsS875pVOBKeJDpLtgwXDXIKsn64W6XDhN7JBmaz2cnjK1WulBm2Ro14+IWhtA7CookeQL50XOjEHpX0g==}
     dev: true
 
   /eslint-scope@7.2.2:
