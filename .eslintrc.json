@@ -10,7 +10,7 @@ VSCE: JavaScript and TypeScript Nightly
 		"node": true
 	},
 	"extends": ["plugin:lube/recommended"],
-	"ignorePatterns": ["**/types/**/*.d.ts", "**/*.cjs"],
+	"ignorePatterns": ["**/types/**/*.d.ts", "**/public.d.ts", "**/private.d.ts", "**/*.cjs"],
 	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
 		"ecmaVersion": "latest",
