@@ -2,18 +2,19 @@
 	"author": "artxe2",
 	"description": "JSDoc Subpackage Example",
 	"devDependencies": {
-		"@typescript-eslint/parser": "^6.7.2",
+		"@typescript-eslint/parser": "^6.7.5",
 		"another-lib": "workspace:^",
-		"eslint": "^8.49.0",
+		"eslint": "^8.51.0",
 		"eslint-plugin-lube": "^0.2.5",
 		"my-lib": "workspace:^",
 		"typescript": "^5.2.2",
-		"vitest": "^0.34.4"
+		"vitest": "^0.34.6"
 	},
 	"keywords": [],
 	"license": "MIT",
 	"name": "jsdoc-subpkg-example",
 	"scripts": {
+		"cjs": "pnpm -r cjs",
 		"dts": "pnpm -r dts",
 		"lint": "tsc && eslint --fix .",
 		"test": "vitest run"

@@ -1,20 +1,32 @@
 {
 	"author": "artxe2",
-	"devDependencies": {
-		"my-lib": "workspace:^"
-	},
 	"description": "JSDoc Subpackage Example",
+	"devDependencies": {
+		"my-lib": "workspace:^",
+		"rollup": "^4.1.4",
+		"typescript": "^5.2.2"
+	},
+	"exports": {
+		".": {
+			"import": "./src/index.js",
+			"require": "./another-lib.cjs",
+			"types": "./types/index.d.ts"
+		}
+	},
 	"keywords": [],
 	"license": "MIT",
 	"main": "src/index.js",
 	"name": "another-lib",
 	"repository": {
+		"directory": "packages/another-lib",
 		"type": "git",
-		"url": "https://github.com/Artxe2/jsdoc-subpkg-example",
-		"directory": "packages/another-lib"
+		"url": "https://github.com/Artxe2/jsdoc-subpkg-example"
 	},
 	"scripts": {
-		"dts": "tsc",
+		"clean:win": "node -e \"if (process.platform === 'win32') process.exit(1)\" || , if exist types rmdir /Q /S types",
+		"clean:lin": "node -e \"if (process.platform !== 'win32') process.exit(1)\" || rm -rf types",
+		"cjs": "rollup src/index.js --file another-lib.cjs --format cjs",
+		"dts": "npm run clean:win && npm run clean:lin && tsc",
 		"test": "cd ../../test/anoter-lib/ && vitest run"
 	},
 	"type": "module",

@@ -1,9 +1,14 @@
 {
 	"author": "artxe2",
 	"description": "JSDoc Subpackage Example",
+	"devDependencies": {
+		"rollup": "^4.1.4",
+		"typescript": "^5.2.2"
+	},
 	"exports": {
 		".": {
-			"default": "./src/index.js",
+			"import": "./src/index.js",
+			"require": "./my-lib.cjs",
 			"types": "./types/index.d.ts"
 		},
 		"./math": {
@@ -25,23 +30,26 @@
 	"main": "src/index.js",
 	"name": "my-lib",
 	"repository": {
+		"directory": "packages/my-lib",
 		"type": "git",
-		"url": "https://github.com/Artxe2/jsdoc-subpkg-example",
-		"directory": "packages/my-lib"
+		"url": "https://github.com/Artxe2/jsdoc-subpkg-example"
 	},
 	"scripts": {
-		"dts": "tsc",
+		"clean:win": "node -e \"if (process.platform === 'win32') process.exit(1)\" || , if exist types rmdir /Q /S types",
+		"clean:lin": "node -e \"if (process.platform !== 'win32') process.exit(1)\" || rm -rf types",
+		"cjs": "rollup src/index.js --file my-lib.cjs --format cjs",
+		"dts": "npm run clean:win && npm run clean:lin && tsc",
 		"test": "cd ../../test/my-lib/ && vitest run"
 	},
 	"type": "module",
 	"types": "types/index.d.ts",
 	"typesVersions": {
 		"*": {
+			"@types": ["public.d.ts"],
 			"*": ["types/index.d.ts"],
 			"math": ["types/math/index.d.ts"],
 			"string": ["types/string/index.d.ts"],
-			"type-test": ["types/type-test/index.d.ts"],
-			"@types": ["public.d.ts"]
+			"type-test": ["types/type-test/index.d.ts"]
 		}
 	},
 	"version": "0.2.0"
