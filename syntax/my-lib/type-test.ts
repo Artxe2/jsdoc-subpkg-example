@@ -1,9 +1,4 @@
-import {
-	Test,
-	generic,
-	importType,
-	typeTest
-} from "my-lib/type-test"
+import { Test, generic, importType, typeTest } from "my-lib/type-test"
 
 const test = new Test("asd")
 

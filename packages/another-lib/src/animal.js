@@ -1,5 +1,5 @@
 /** @param {import("../private.js").Animal} animal */
-export default (animal) => {
+export default animal => {
 	if (animal.no == 1) {
 		animal.fly()
 	}
@@ -13,5 +13,5 @@ export default (animal) => {
  * @return {animal is import("../private.js").Fish}
  */
 function is_fish(animal) {
-	return /** @type {import("../private.js").Fish} */(animal).swim != void 0
+	return /** @type {import("../private.js").Fish} */(animal)/**/.swim != void 0
 }

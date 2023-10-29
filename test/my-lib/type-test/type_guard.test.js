@@ -11,7 +11,7 @@ describe(
 				assert.equal(
 					typeTest({
 						type: "A",
-						a: () => "aa" 
+						a: () => "aa"
 					}),
 					"aa"
 				)
@@ -23,7 +23,7 @@ describe(
 				assert.equal(
 					typeTest({
 						type: "B",
-						b: () => "bb" 
+						b: () => "bb"
 					}),
 					"bb"
 				)
@@ -35,7 +35,7 @@ describe(
 				assert.equal(
 					typeTest({
 						type: "C",
-						c: () => "cc" 
+						c: () => "cc"
 					}),
 					"cc"
 				)
