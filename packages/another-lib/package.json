@@ -3,7 +3,7 @@
 	"description": "JSDoc Subpackage Example",
 	"devDependencies": {
 		"my-lib": "workspace:^",
-		"rollup": "^4.1.4",
+		"rollup": "^4.5.0",
 		"typescript": "^5.2.2"
 	},
 	"exports": {
@@ -23,11 +23,9 @@
 		"url": "https://github.com/Artxe2/jsdoc-subpkg-example"
 	},
 	"scripts": {
-		"clean:win": "node -e \"if (process.platform === 'win32') process.exit(1)\" || , if exist types rmdir /Q /S types",
-		"clean:lin": "node -e \"if (process.platform !== 'win32') process.exit(1)\" || rm -rf types",
 		"cjs": "rollup src/index.js --file another-lib.cjs --format cjs",
-		"dts": "npm run clean:win && npm run clean:lin && tsc",
-		"test": "cd ../../test/anoter-lib/ && vitest run"
+		"dts": "node ../../scripts/tsc_with_clean.js another-lib",
+		"test": "cd ../../test/another-lib/ && vitest run"
 	},
 	"type": "module",
 	"types": "types/index.d.ts",

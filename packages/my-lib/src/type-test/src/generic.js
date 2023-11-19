@@ -4,5 +4,5 @@
  * @returns {[T, T]}
  */
 export default function(abc) {
-	return [abc, abc]
+	return [ abc, abc ]
 }

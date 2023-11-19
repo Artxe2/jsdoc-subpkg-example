@@ -2,10 +2,11 @@
 	"author": "artxe2",
 	"description": "JSDoc Subpackage Example",
 	"devDependencies": {
-		"@typescript-eslint/parser": "^6.8.0",
+		"@typescript-eslint/parser": "^6.11.0",
+		"@vitest/coverage-v8": "^0.34.6",
 		"another-lib": "workspace:^",
-		"eslint": "^8.52.0",
-		"eslint-plugin-lube": "^0.3.5",
+		"eslint": "^8.54.0",
+		"eslint-plugin-lube": "^0.4.3",
 		"my-lib": "workspace:^",
 		"typescript": "^5.2.2",
 		"vitest": "^0.34.6"
@@ -16,10 +17,10 @@
 	"scripts": {
 		"cjs": "pnpm -r cjs",
 		"dts": "pnpm -r dts",
-		"lint": "eslint --fix **/*.{js,ts}",
+		"lint": "eslint --cache --fix **/*.{js,json,ts}",
 		"pre": "pnpm test && pnpm lint && pnpm dts && pnpm cjs && tsc",
-		"test": "vitest run"
+		"test": "vitest run --coverage"
 	},
 	"type": "module",
-	"version": "0.0.1"
+	"version": "0.0.0"
 }
