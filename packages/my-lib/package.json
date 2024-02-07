@@ -39,7 +39,6 @@
 		"dts": "node ../../scripts/tsc_with_clean.js my-lib",
 		"test": "cd ../../test/my-lib/ && vitest run"
 	},
-	"type": "module",
 	"types": "types/index.d.ts",
 	"typesVersions": {
 		"*": {
